@@ -34,7 +34,7 @@
     <div id="root"></div>
     <script>
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/firebase-messaging-sw.js')
+    navigator.serviceWorker.register('/tested/firebase-messaging-sw.js')
       .then(reg => console.log('Service Worker registrado!', reg))
       .catch(err => console.error('Erro ao registrar Service Worker:', err));
   }
