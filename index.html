@@ -32,6 +32,13 @@
     </noscript>
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
+    <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/firebase-messaging-sw.js')
+      .then(reg => console.log('Service Worker registrado!', reg))
+      .catch(err => console.error('Erro ao registrar Service Worker:', err));
+  }
+</script>
   <script src="/tested/index-324a9d2743d8d6dccc5753724b90e7fb.js" defer></script>
 </body>
 </html>
